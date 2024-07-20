@@ -1,0 +1,406 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: "Montserrat", sans-serif;
+    background: #000000;
+    
+
+
+}
+h1{
+    color: white;
+    font-size: 45px;
+}
+
+ul li{
+    display: inline-block;
+    padding: 0px 20px;
+    font-size: 1.3rem;
+   
+
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.container-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    overflow: hidden;
+    
+}
+
+
+.carruseles {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    
+
+}
+
+.slider-section {
+    width: calc(100% / 4);
+    height: 100%;
+    
+    
+}
+
+.slider-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+   
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+   
+    
+}
+
+.overlay h2{
+    font-family: Montserrat;
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    top: 50%; /* Posición vertical al 50% */
+    left: 2%; /* Ajusta la distancia desde la derecha de la imagen */
+    transform: translateY(-50%); /* Centra verticalmente el texto */
+    padding: 2px; /* Espaciado interno del texto */
+    border-radius: 3px; /* Bordes redondeados */
+    text-align: right; /* Alinea el texto a la derecha */
+    
+
+}
+
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+.Freshbite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    min-height: 70vh;
+    background-color: #f0f0f0; /* Fondo para resaltar el texto */
+}
+
+.Freshbite p {
+    font-family: "Merriweather", serif;
+    font-size: 1.5em;
+    color: #2F5C28;
+    margin: 0;
+}
+.Freshbite h3{
+    font-size: 2em;
+    margin-top: 5%;
+    color: #2F5C28;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+
+}
+.Freshbite .subtext {
+    font-size: 1.2em;
+    margin-top: 5%;
+    color: black;
+    font-family: "Merriweather", serif;
+}
+
+@media (max-width: 600px) {
+    .Freshbite p {
+        font-size: 1.2em; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    }
+    .Freshbite .subtext {
+        font-size: 1em; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    }
+}
+
+main{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white; /* Fondo para resaltar el texto */
+
+    
+}
+
+.tittle{
+    font-size: 2em;
+    color: #2F5C28;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+}
+
+.faq-content{
+    font-family: "Merriweather", serif;
+    width: 100%;
+    margin-top: 5%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.faq-collapsible{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    
+    overflow: hidden;
+
+}
+
+.first{
+    border-top:  solid #afafaf;
+}
+
+.question{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.question.active{
+    color: rgb(35, 113, 231);
+}
+
+.faq-answer{
+    overflow: hidden;
+    transition: 0.5s;
+    height: 0;
+}
+
+.faq-answer p{
+ 
+    font-size: 0.9em;
+}
+
+.open{
+    height: 100px;
+    transform: translateY(0);
+
+}
+
+.arrow-container{
+    width: 40px;
+    height: 30px;
+    position: relative;
+}
+
+.up .line{
+    transform: translate(0%, -50%) rotate(-45deg);
+}
+.up .line:nth-of-type(2){
+    transform: translate(0%, -50%) rotate(45deg);
+}
+
+.line{
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    background-color: #121212;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translate(0%, -50%) rotate(45deg);
+}
+
+.line:nth-of-type(2){
+    right: 8%;
+    left: auto;
+    transform: translate(0%, -50%) rotate(-45deg);
+}
+
+
+.contacto{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    min-height: 70vh;
+    background-color: #f0f0f0;
+    
+}
+
+.contacto h3{
+    font-family: "Merriweather", serif;
+    font-size: 2em;
+    margin-top: 5%;
+    color: #2F5C28;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+
+}
+
+.contacto .subtext{
+    font-size: 1.2em;
+    margin-top: 5%;
+    color: black;
+    font-family: "Merriweather", serif; 
+}
+
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.about-section img {
+    max-width: 20%;
+    height: auto;
+    margin: 2%;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.about-text h2{
+    font-family: "Merriweather", serif;
+    font-size: 2em;
+    margin-top: 5%;
+    color: #2F5C28;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+}
+.about-text {
+    max-width: 600px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+@media (max-width: 800px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-section img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        max-width: 100%;
+        font-size: 1em;
+    }
+}
+#btnTop {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#btnTop:hover {
+    background-color: #555;
+}
+/* Estilos para el icono de WhatsApp */
+#whatsapp-icon {
+    
+    position: fixed;
+    bottom:  20px; /* Ajusta la distancia desde la parte inferior */
+    right: 30px; /* Ajusta la distancia desde la derecha */
+    z-index: 100;
+}
+
+#whatsapp-icon img {
+    
+    width: 50px; /* Ajusta el tamaño del icono */
+    height: 50px;
+    border-radius: 50%;
+}
+.footer {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1em;
+}
+
+.footer p {
+    margin: 0;
+}
